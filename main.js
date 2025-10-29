@@ -82,7 +82,7 @@ async function main() {
         'curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 \n' +
         'chmod 700 get_helm.sh > /dev/null 2>&1\n' +
         'tar --version \n' +
-        'DESIRED_VERSION="' + (process.env.INPUT_HELM_VERSION || '') + '" HELM_INSTALL_DIR=' + dockerKubeConfigDir + ' ./get_helm.sh \n' +
+        'DESIRED_VERSION="' + (process.env.INPUT_HELM_VERSION || '') + '" HELM_INSTALL_DIR=' + dockerKubeConfigDir + ' DEBUG=true ./get_helm.sh \n' +
         'helm version \n' +
         'rm ./get_helm.sh > /dev/null 2>&1\n' +
         ' \n' +
